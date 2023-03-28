@@ -1,4 +1,16 @@
-const uuid = require('uuid');
 const express = require('express');
+const app = express();
+const PORT = 3000;
 
-console.log('The unique identifier is ' + uuid.v4());
+app.get('/', (req, res) => {
+    res.send('Hello, world');
+});
+
+
+app.post('/', (req, res) => {
+    res,send('Moo moo ha');
+});
+
+app.listen(PORT, () => {
+    console.log('App listening on port: ' + PORT);
+});
