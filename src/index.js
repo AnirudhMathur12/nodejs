@@ -11,6 +11,10 @@ app.post('/', (req, res) => {
     res.send('Moo moo ha');
 });
 
+app.post('/', (req, res) => {
+    console.log(req.body);
+});
+
 app.listen(PORT, () => {
     console.log('App listening on port: ' + PORT);
 });
